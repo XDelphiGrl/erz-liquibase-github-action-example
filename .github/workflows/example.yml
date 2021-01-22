@@ -6,7 +6,7 @@ jobs:
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
-      - uses: XDelphiGrl/docker@v3.3
+      - uses: XDelphiGrl/docker@v3.4
       - uses: XDelphiGrl/liquibase-github-action@v1
         with:
           operation: 'update'
