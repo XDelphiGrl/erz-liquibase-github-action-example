@@ -6,7 +6,7 @@ jobs:
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
-      - uses: XDelphiGrl/liquibase-github-action@v3
+      - uses: XDelphiGrl/liquibase-github-action@v4.1
         with:
           operation: 'update'
           classpath: 'example/changelogs'
