@@ -6,16 +6,7 @@ jobs:
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
-      - name: Install Liquibase
-        run: |
-          curl -sSL -o liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz https://jenkins.datical.net/job/liquibase-pro/job/DAT-5700/13/artifact/liquibase/liquibase-dist/target/liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz
-          mkdir bin
-          sudo cp liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz /bin
-          cd bin
-          pwd
-          ls
-          tar --verbose -xf liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz -C .
-      - uses: liquibase/liquibase-github-action@v1
+      - uses: XDelphiGrl/liquibase-github-action@v1
         with:
           operation: 'update'
           classpath: 'example/changelogs'
