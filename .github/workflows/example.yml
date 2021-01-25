@@ -9,7 +9,7 @@ jobs:
       - uses: docker/login-action@v1
         with:
           registry: docker.pkg.github.com
-          username: ${{ XDelphiGrl }}
+          username: XDelphiGrl
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: XDelphiGrl/liquibase-github-action@v5.0
         with:
