@@ -2,12 +2,20 @@ on: [push]
 
 jobs:
   test-liquibase-action:
-    runs-on: ubuntu-latest
+    runs-on: docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700
     name: Test Liquibase Action
     steps:
+      -
+        name: Login to GitHub Package Registry
+        uses: XDelphiGrl/login-action@v0.1
+        with:
+          registry: docker.pkg.github.com
+          username: XDelphiGrl
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v2
       - uses: XDelphiGrl/login-action@v0.1
-      - uses: XDelphiGrl/liquibase-github-action@v5.0
+      - uses: XDelphiGrl/liquibase-github-action@v5.1
         with:
           operation: 'update'
           classpath: 'example/changelogs'
