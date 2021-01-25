@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   test-liquibase-action:
-    runs-on: docker.pkg.github.com/xdelphigrl/docker/erz-liquibase-docker:dat-5700
+    runs-on: ubuntu-latest
     name: Test Liquibase Action
     steps:
       -
