@@ -6,11 +6,7 @@ jobs:
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
-      - uses: docker/login-action@v1
-        with:
-          registry: docker.pkg.github.com
-          username: XDelphiGrl
-          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: XDelphGrl/docker-login@latest
       - uses: XDelphiGrl/liquibase-github-action@v5.0
         with:
           operation: 'update'
