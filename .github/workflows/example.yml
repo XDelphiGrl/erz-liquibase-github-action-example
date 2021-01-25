@@ -6,7 +6,6 @@ jobs:
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
-         name: Login to GitHub Packages Docker Registry
       - uses: docker/login-action@v1
         with:
           registry: docker.pkg.github.com
