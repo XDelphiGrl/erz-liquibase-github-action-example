@@ -9,7 +9,7 @@ jobs:
       - uses: XDelphiGrl/liquibase-github-action@v7.0
         with:
           operation: 'update'
-          classpath: /liquibase/changelog:/liquibase/classpath:/liquibase/example/changelogs
+          classpath: /liquibase/changelog:/liquibase/classpath:/example/changelogs
           changeLogFile: samplechangelog.h2.sql
           url: jdbc:h2:file:./H2_project/h2tutorial
           username: liqubase
