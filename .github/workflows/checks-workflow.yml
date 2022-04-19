@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: XDelphiGrl/erz-liquibase-github-action@v7.2
-      - uses: ./
         with:
           operation: 'checks run'
           changeLogFile: 'samplechangelog.h2.sql'
