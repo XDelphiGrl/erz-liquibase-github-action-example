@@ -1,15 +1,14 @@
 name: Liquibase Update
 
-on: [pull_request]
+on: [pull_request,push]
 
 jobs:
-  test-liquibase-action:
-    runs-on: ubuntu-latest
+  update:
     name: Liquibase Update
+    runs-on: ubuntu-latest
     steps:
-      - name: Install Liquibase
       - uses: actions/checkout@v2
-      - uses: liquibase/liquibase-github-action@v4
+      - uses: XDelphiGrl/liquibase-github-action@v7.2
         with:
           operation: 'update'
           classpath: 'example/changelogs'
