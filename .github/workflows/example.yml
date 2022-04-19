@@ -14,5 +14,5 @@ jobs:
           classpath: 'example/changelogs'
           changeLogFile: 'samplechangelog.h2.sql'
           username: ${{ secrets.DBUSERNAME }}
-          password: ${{ secrets.DBPASSWORD }}
+          password: ${{ secrets.DBPASS }}
           url: ${{ secrets.DBURL }}
