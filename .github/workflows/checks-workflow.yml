@@ -1,0 +1,16 @@
+name: Liquibase Quality Checks
+
+on: [push]
+
+jobs:
+  runchecks:
+    name: "Run Liquibase Quality Checks"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: XDelphiGrl/erz-liquibase-github-action@v7.2
+        with:
+          operation: 'checks run'
+          changeLogFile: 'example/changelogs/samplechangelog.h2.sql'
+          checksSettingsFile: 'example/changelogs/checksettings.conf'
+          proLicenseKey: ${{ secrets.LIQUIBASE_LICENSE_KEY }}
