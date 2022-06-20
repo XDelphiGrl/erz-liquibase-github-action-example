@@ -1,0 +1,15 @@
+name: Liquibase Quality Checks: Database Scope
+
+on: [push]
+
+jobs:
+  runchecks:
+    name: "Run Liquibase Database QCs"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: XDelphiGrl/erz-liquibase-github-action@v7.2
+        with:
+          operation: 'checks run'
+          checksSettingsFile: 'example/changelogs/checksettings-db.conf'
+          licenseKey: ${{ secrets.LIQUIBASE_LABS_LICENSE }}
