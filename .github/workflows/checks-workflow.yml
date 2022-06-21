@@ -1,4 +1,4 @@
-name: Liquibase Quality Checks
+name: Liquibase Quality Checks: Changelog Scope
 
 on: [push]
 
@@ -12,5 +12,5 @@ jobs:
         with:
           operation: 'checks run'
           changeLogFile: 'example/changelogs/samplechangelog.h2.sql'
-          checksSettingsFile: 'example/changelogs/checksettings.conf'
+          checksSettingsFile: 'example/changelogs/checksettings-changelog.conf'
           proLicenseKey: ${{ secrets.LIQUIBASE_LICENSE_KEY }}
