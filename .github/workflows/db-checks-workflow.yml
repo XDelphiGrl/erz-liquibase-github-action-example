@@ -12,4 +12,5 @@ jobs:
         with:
           operation: 'checks run'
           checksSettingsFile: 'example/changelogs/checksettings-db.conf'
+          checksScope: 'database'
           licenseKey: ${{ secrets.LIQUIBASE_LABS_LICENSE }}
