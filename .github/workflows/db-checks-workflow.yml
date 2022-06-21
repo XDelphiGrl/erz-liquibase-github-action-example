@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: StevenMassaro/liquibase-github-action@v4-alpha
+      - uses: XDelphiGrl/erz-liquibase-github-action@v7.3
         with:
           operation: 'checks run'
           checksSettingsFile: 'example/changelogs/checksettings-db.conf'
