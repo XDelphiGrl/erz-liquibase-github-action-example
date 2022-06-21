@@ -1,4 +1,4 @@
-name: Liquibase Quality Checks: Database Scope
+name: Liquibase Database Checks
 
 on: [push]
 
