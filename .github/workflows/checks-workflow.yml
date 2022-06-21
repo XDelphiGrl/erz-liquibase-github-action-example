@@ -1,4 +1,4 @@
-name: Liquibase Quality Checks: Changelog Scope
+name: Liquibase Changelog Checks
 
 on: [push]
 
