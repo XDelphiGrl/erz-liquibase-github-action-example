@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: XDelphiGrl/erz-liquibase-github-action@v7.3.1
+      - uses: XDelphiGrl/erz-liquibase-github-action@v7.3
         with:
           operation: 'update'
           classpath: 'example/changelogs'
