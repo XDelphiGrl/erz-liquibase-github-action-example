@@ -13,5 +13,5 @@ jobs:
           operation: 'checks run'
           classpath: 'example/changelogs'
           changeLogFile: 'samplechangelog.h2.sql'
-          checksSettingsFile: 'checksettings-changelog.conf'
+          checksSettingsFile: 'example/changelogs/checkssettings-changelog.conf'
           proLicenseKey: ${{ secrets.LIQUIBASE_LICENSE_KEY }}
