@@ -13,6 +13,7 @@ jobs:
           operation: 'checks run'
           changeLogFile: 'example/changelogs/samplechangelog.h2.sql'
           checksSettingsFile: 'example/changelogs/checkssettings-db.conf'
+          checksScope: 'database'
           licenseKey: ${{ secrets.LIQUIBASE_LABS_LICENSE }}
           username: ${{ secrets.DBUSERNAME }}
           password: ${{ secrets.DBPASS }}
