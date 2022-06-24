@@ -11,7 +11,6 @@ jobs:
       - uses: XDelphiGrl/erz-liquibase-github-action@v7.3
         with:
           operation: 'checks run'
-          classpath: 'example/changelogs'
-          changeLogFile: 'samplechangelog.h2.sql'
+          changeLogFile: 'example/changelogs/samplechangelog.h2.sql'
           checksSettingsFile: 'example/changelogs/checkssettings-changelog.conf'
           proLicenseKey: ${{ secrets.LIQUIBASE_LICENSE_KEY }}
